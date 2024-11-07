@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Success with Sulaman</title>
+    <!-- Link to Font Awesome for the dropdown icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Social Media Success with Sulaman</h1>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+            <div class="dropdown">
+                <button class="dropbtn">More 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#team">Team</a>
+                    <a href="#careers">Careers</a>
+                </div>
+            </div> 
+        </div>
+    </header>
+
+    <!-- Logo Section -->
+    <img src="SMSWS.png" alt="Social Media Success Logo" class="logo">
+
+    <!-- Introduction and Mission Statement -->
+    <p>Welcome! I’m Sulaman, and I’m here to help you grow your social media presence with strategies that increase visibility, engage your audience, and expand your online influence. Let’s make your brand thrive on social media!</p>
+
+    <!-- Image Slider Section -->
+    <div class="slider-container">
+        <div class="slider">
+            <img src="image1.png" class="slide" alt="Slide 1">
+            <img src="image2.png" class="slide" alt="Slide 2">
+            <img src="image3.png" class="slide" alt="Slide 3">
+            <img src="image4.png" class="slide" alt="Slide 4">
+        </div>
+        <!-- Navigation Controls -->
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <!-- Short Bio -->
+    <p class="bio">I am passionate about using social media to empower clients, helping them reach new audiences and achieve success online.</p>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2012 Sulaman D. Drammeh. All Rights Reserved.</p>
+        <a href="https://www.linkedin.com">LinkedIn</a>
+        <a href="https://github.com">GitHub</a>
+        <a href="https://www.w3schools.com">Learn HTML</a>
+    </footer>
+
+    <!-- JavaScript for Slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.getElementsByClassName('slide');
+
+        function showSlide(index) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slides[index].style.display = 'block';
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
